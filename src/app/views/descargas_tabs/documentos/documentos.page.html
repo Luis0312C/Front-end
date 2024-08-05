@@ -1,0 +1,135 @@
+<ion-content class="content" [fullscreen]="true">
+<div class="documentos-content">
+  <ion-accordion-group>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Material de prospección</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let prospecto of prospeccion; let i = index" class="table-row" (click)="downloadDocument(prospecto.url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="prospecto.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ prospecto.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Manuales</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let manual of manuales; let i = index" class="table-row" (click)="downloadDocument(manual.url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="manual.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ manual.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Información clientes</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let cliente of clientes; let i = index" class="table-row" (click)="downloadDocument(cliente.url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="cliente.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ cliente.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Contratos</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let contrato of contratos; let i = index" class="table-row" (click)="downloadDocument(contrato.url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="contrato.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ contrato.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Propuestas</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let propuesta of propuestas; let i = index" class="table-row" (click)="downloadDocument(propuesta.url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="propuesta.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ propuesta.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</div>
+</ion-content>

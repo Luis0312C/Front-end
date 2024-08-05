@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Cliente</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-note>{{ clientesData.nombre }}</ion-note>
+    </ion-item>
+    <!-- Agrega más campos aquí (dominio, email_empresa, etc.) -->
+  </ion-list>
+</ion-content>

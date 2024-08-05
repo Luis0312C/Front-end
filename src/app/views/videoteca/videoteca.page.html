@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 55px">
+    <ion-buttons slot="start">
+      <ion-menu-button style="font-size: 40px; width: 45px"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()" style="margin-top: 55px;">
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="operativa">
+        <ion-label class="tab-label">Operativa</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="training">
+        <ion-label class="tab-label">Training</ion-label>
+      </ion-tab-button> 
+      <ion-tab-button tab="generales">
+        <ion-label class="tab-label">Generales</ion-label>
+      </ion-tab-button>
+      <!-- <ion-tab-button tab="manuales">
+        <ion-label class="tab-label">Manuales</ion-label>
+      </ion-tab-button> -->
+    </ion-tab-bar>
+  </ion-tabs>

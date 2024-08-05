@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 55px">
+    <ion-buttons slot="start">
+      <ion-menu-button style="font-size: 40px; width: 45px"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="avatar-container">
+    <ion-avatar class="avatar-large">
+      <img *ngIf="gravatarUrl" [src]="gravatarUrl" alt="Gravatar Image" />
+    </ion-avatar>
+  </div>
+
+  <div class="nombre-container">
+    <ion-item lines="none">
+      <strong style="font-size: 1.1rem;">{{ InformacionE[0]?.nombre }} {{ InformacionE[0]?.ap_paterno }} {{ InformacionE[0]?.ap_materno }}</strong>
+    </ion-item>
+  </div>
+
+  <ion-grid class="info-grid">
+    <ion-row *ngFor="let informacion of InformacionE; let i = index">
+      <ion-col size="12" class="info-col">
+        <ion-card class="info-card">
+          <ion-card-content>
+            <ion-item>
+              <ion-label class="info-label">Género:</ion-label>
+              <ion-input value="{{ getGenero(informacion.genero) }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Fecha de Nacimiento:</ion-label>
+              <ion-input value="{{ informacion.fecha_nac }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Email:</ion-label>
+              <ion-input value="{{ informacion.email_empresa }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Teléfono:</ion-label>
+              <ion-input value="{{ informacion.telefono }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Fecha de Ingreso:</ion-label>
+              <ion-input value="{{ informacion.fecha_ingreso }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Usuario Skype:</ion-label>
+              <ion-input value="{{ informacion.usuario_skype }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Región:</ion-label>
+              <ion-input value="{{ getRegion(informacion.id_region) }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Departamento:</ion-label>
+              <ion-input value="{{ informacion.depto }}" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Cambiar contraseña</ion-label>
+              <ion-icon id="open-custom-dialog-icon" name="pencil-outline" (click)="openCustomDialog()"></ion-icon>
+            </ion-item>
+            <ion-item>
+              <ion-label class="info-label">Agregar descripción</ion-label>
+              <ion-icon id="open-custom-dialog-icon" name="add-outline" (click)="openDescriptionDialog()"></ion-icon>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-modal id="example-modal" #modalChangePassword trigger="open-change-password-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <h1 class="h1-name">Cambio de contraseña</h1>
+        <ion-list lines="none" class="center-content"> 
+          <ion-input [(ngModel)]="currentPassword" class="input-password" label="Contraseña actual" label-placement="floating" fill="outline"></ion-input>
+          <ion-input [(ngModel)]="newPassword" class="input-password" label="Nueva contraseña" label-placement="floating" fill="outline"></ion-input>
+          <ion-input [(ngModel)]="confirmPassword" class="input-password" label="Confirmación" label-placement="floating" fill="outline"></ion-input>
+          <div class="button-container">
+            <ion-button class="button-confirmar" (click)="changePassword()">Confirmar</ion-button>
+            <ion-button class="button-cancelar" (click)="cancelPassword()" fill="outline">Cancelar</ion-button>
+          </div>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+  
+
+  <ion-modal id="example-modal" #modalDescription trigger="open-description-dialog">
+    <ng-template>
+      <div class="wrapper">
+        <h1 class="h1-name">Descripción</h1>
+        <ion-list lines="none" class="center-content"> 
+          <ion-input [(ngModel)]="description" class="input-description" label="Descripción" label-placement="floating" fill="outline"></ion-input>
+          <div class="button-container">
+            <ion-button class="button-confirmar" (click)="saveDescription()">Guardar</ion-button>
+            <ion-button class="button-cancelar" (click)="cancelAbout()" fill="outline">Cancelar</ion-button>
+          </div>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

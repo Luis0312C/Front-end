@@ -1,0 +1,7 @@
+{
+  "name": "sigoFrontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

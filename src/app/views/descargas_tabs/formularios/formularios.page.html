@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <div class="formularios-content">
+  <ion-card class="documentos-card">
+    <ion-grid>
+      <ion-item *ngFor="let formulario of formularios; let i = index" class="table-row" (click)="downloadDocument(formulario.documento_url)">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="auto">
+              <img class="icon-clientes" [src]="'../assets/formulario.png'">
+            </ion-col>
+            <ion-col>
+              {{ formulario.titulo }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+  </div>
+</ion-content>

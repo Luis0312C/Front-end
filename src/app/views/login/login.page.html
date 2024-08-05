@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <ion-img src="/assets/logo_sigo.png"></ion-img>
+      <h1 style="color: #ffffff;">S.I.G.O</h1>
+      <p style="color: #ffffff;">Sistema de Información General de Optimización</p>    
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-input [(ngModel)]="username" name="username" style="color: #ffffff;" label="Correo electrónico" label-placement="floating" fill="outline" placeholder="Correo electrónico"></ion-input>
+      </div>
+      <br>
+       <div class="form-input2">
+        <ion-input type="password"  [(ngModel)]="password" name="password" style="color: #ffffff;" label="Contraseña" label-placement="floating" fill="outline" placeholder="Contraseña"></ion-input>
+      </div>
+        <div class="password">
+          <ion-text>
+            <a routerLink="/reset-password" style="text-decoration: none; color: #ffffff;">¿Olvidaste tu
+              contraseña?</a>
+          </ion-text>
+        </div>
+    </div>
+    <div class="action-buttons ion-padding">
+      <ion-button class="login-button" (click)="login()" expand="block" fill="outline" shape="round" style="--color: #ffffff;" size="large">Iniciar sesión</ion-button>
+    </div>
+  </div>
+</ion-content>

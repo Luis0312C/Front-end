@@ -1,0 +1,242 @@
+<ion-content class="content" [fullscreen]="true">
+<div class="manuales-content">
+  <ion-accordion-group>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>ADS</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let ads of ADS; let i = index" class="table-row" (click)="downloadDocument(ads.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="ads.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ ads.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Auditorias</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let Auditoria of Auditorias; let i = index" class="table-row" (click)="downloadDocument(Auditoria.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="Auditoria.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ Auditoria.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Comercial</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let Comercia of Comercial; let i = index" class="table-row" (click)="downloadDocument(Comercia.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="Comercia.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ Comercia.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Contratos</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let Contrato of Contratos; let i = index" class="table-row" (click)="downloadDocument(Contrato.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="Contrato.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ Contrato.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Diseño</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let Disen of Disenio; let i = index" class="table-row" (click)="downloadDocument(Disen.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="Disen.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ Disen.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Email Marketing</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let Email of Emails; let i = index" class="table-row" (click)="downloadDocument(Email.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="Email.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ Email.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>Link Building</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let Link of Links; let i = index" class="table-row" (click)="downloadDocument(Link.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="Link.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ Link.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>SMM</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let smm of SMM; let i = index" class="table-row" (click)="downloadDocument(smm.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="smm.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ smm.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <ion-accordion-group style="margin-top: 10px;">
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label>TI</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-card class="documentos-card">
+          <ion-grid>
+            <ion-item *ngFor="let ti of TIS; let i = index" class="table-row" (click)="downloadDocument(ti.video_url)">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="auto">
+                    <img class="icon-clientes" [src]="ti.icono">
+                  </ion-col>
+                  <ion-col>
+                    {{ ti.titulo }}
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</div>
+</ion-content>

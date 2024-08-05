@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 55px">
+    <ion-buttons slot="start">
+      <ion-menu-button style="font-size: 40px; width: 45px"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()" style="margin-top: 55px;">
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="tickets-generados">
+        <ion-label class="tab-label">Tickets generados</ion-label> 
+      </ion-tab-button>
+      <ion-tab-button tab="tickets-asociados">
+        <ion-label class="tab-label">Tickets asociados</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+

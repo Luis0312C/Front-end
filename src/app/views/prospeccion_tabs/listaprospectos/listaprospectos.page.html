@@ -1,0 +1,36 @@
+<ion-header class="header-content">
+  <ion-toolbar>
+    <ion-searchbar
+      animated
+      placeholder="Busqueda"
+      [(ngModel)]="filterTerm"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="operativa-conten">
+    <ion-card class="prospectos-card">
+      <ion-grid>
+        <ion-item *ngFor="let prospecto of prospectosLista | filter:filterTerm; let i = index" class="table-row">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="9">
+                <div class="prospecto-info">
+                  <div class="prospecto-title">{{ prospecto.nombre_empresa }}</div>
+                  <div class="prospecto-date">{{ prospecto.dominio }}</div>
+                </div>
+              </ion-col>
+              <ion-col size="2">
+                <div class="prospecto-info">
+                  <div [ngClass]="{'prospecto-prospecto': prospecto.descripcion === 'PROSPECTO', 'prospecto-cliente': prospecto.descripcion === 'CLIENTE', 'prospecto-no': prospecto.descripcion === 'NO CONTACTAR'}">{{ prospecto.descripcion }}</div>
+                  <div class="prospecto-date2">{{ prospecto.fuente }}</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-grid>
+    </ion-card>
+  </div>
+</ion-content>

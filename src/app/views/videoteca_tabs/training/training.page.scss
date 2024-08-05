@@ -1,0 +1,87 @@
+.header-content{
+  background-color: transparent;
+  box-shadow: none;
+}
+
+// .training-content {
+//   margin-top: 10px; 
+//   padding-top: 16px; 
+// }
+
+.content{
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+.training-content{
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.card-documentos{
+  margin-top: 30px;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  
+}
+
+:root {
+  --color-background: #ffffff;
+  --color-background-hover: #e0e0e0;
+  --color-background-activated: #d0d0d0;
+  --color-text: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1c1c1e;
+    --color-background-hover: #333;
+    --color-background-activated: #444;
+    --color-text: #ffffff;
+  }
+}
+
+ion-card.documentos-card {
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: transparent;
+  margin-top: -10px;
+
+  .table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --background: var(--color-background);
+    --background-hover: var(--color-background-hover);
+    --background-activated: var(--color-background-activated);
+    --color: var(--color-text);
+    --padding-start: 0;
+    --padding-end: 0;
+    --min-height: 50px;
+    margin: 5px 0;
+
+    ion-col {
+      display: flex;
+      align-items: center;
+    }
+
+.thumbnail {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+.video-title{
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  // margin-left: 10px;
+}
+.video-date{
+  font-size: 0.8rem;
+  // margin-left: 10px;
+}
+}
+}

@@ -1,0 +1,114 @@
+/* Estilo para el fondo del menú */
+.menu-header-bg {
+    height: 180px;
+    width: 350px;
+    transform: rotate(-15deg);
+    border-radius: 10px 10px 10px 50px;
+    margin-left: -18px;
+    margin-top: -50px;
+    margin-bottom: 60px;
+  }
+  
+  /* Estilo para el contenido del encabezado */
+  .header-content {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+  
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  
+    ion-label {
+      margin-left: 10px;
+      margin-top: 12px;
+  
+      h2 {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+  
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  /* Estilo para los elementos del menú */
+  .menu-items {
+    margin: 0;
+    margin-top: -80px;
+  
+    .icon {
+      font-size: 1.4rem;
+      margin-left: -10px;
+    }
+  
+    ion-row {
+      ion-col {
+        display: flex;
+        align-items: center;
+        padding: 15px; /* Ajuste del padding */
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 10px; /* Espaciado entre elementos */
+  
+  
+        ion-icon {
+          font-size: 24px;
+          margin-right: 22px;
+        }
+  
+        ion-label {
+          font-size: 15px; /* Ajuste del tamaño de la letra */
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  .last-items {
+    margin: 0;
+    margin-top: -8px;
+    
+    .icon {
+      font-size: 1.4rem;
+      margin-left: -10px;
+    }
+  
+    ion-row {
+      ion-col {
+        display: flex;
+        align-items: center;
+        padding: 15px; /* Ajuste del padding */
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 10px; /* Espaciado entre elementos */
+  
+        
+  
+        ion-icon {
+          font-size: 24px;
+          margin-right: 22px;
+        }
+  
+        ion-label {
+          font-size: 15px; /* Ajuste del tamaño de la letra */
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  /* Estilo para la línea divisoria debajo del ion-grid */
+  .divider-line {
+    border-bottom: 1px solid #afa9a9;
+    margin-top: 10px; /* Ajusta según necesites */
+  }
+  

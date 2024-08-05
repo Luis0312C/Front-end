@@ -1,0 +1,34 @@
+<ion-header class="header-content">
+  <ion-toolbar>
+    <ion-searchbar
+      animated
+      placeholder="Busqueda"
+      [(ngModel)]="filterTerm"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="generales-content">
+    <ion-card class="documentos-card">
+      <ion-grid>
+        <ion-item *ngFor="let generalesVideo of generalesVideos | filter:filterTerm; let i = index" class="table-row" (click)="downloadVideo(generalesVideo.video_url)">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="auto">
+                <img class="thumbnail" [src]="generalesVideo.thumbnail">
+              </ion-col>
+              <ion-col>
+                <div class="video-info">
+                  <div class="video-title">{{ generalesVideo.titulo }}</div>
+                  <div class="video-date">{{ generalesVideo.fecha_creacion }}</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-grid> 
+    </ion-card>
+  </div>
+</ion-content>

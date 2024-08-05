@@ -1,0 +1,157 @@
+.card-name{
+    margin-top: 30px;
+    box-shadow: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.clientes-card{
+    margin-top: 30px;
+    box-shadow: none;
+    background-color: transparent;
+    margin-left: -5px;
+    font-size: 0.8rem;
+}
+
+
+ion-card.clientes-card {
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --background: var(--color-background);
+    --background-hover: var(--color-background-hover);
+    --background-activated: var(--color-background-activated);
+    --color: var(--color-text);
+    --padding-start: 0;
+    --padding-end: 0;
+    --min-height: 50px;
+    margin: 5px 0;
+}
+
+.table-row ion-col {
+    display: flex;
+    align-items: center;
+}
+
+.table-row img {
+    width: 40px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.title-clientes {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+.data{
+    font-size: 0.8rem;
+}
+
+
+.date2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #33b75a;
+}
+
+
+ion-content {
+    --padding-start: 10px;
+    --padding-end: 10px;
+}
+
+.fila_uno{
+    text-align: center;
+    margin: 10px 0;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.fila_dos {
+    text-align: center;
+    margin: 10px 0;
+    margin-top: -10px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+ion-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 10px 0;
+}
+.prioridad-alta{
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: #e71b10;
+    font-weight: bold;
+  }
+  .prioridad-media{
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: #ecb616;
+    font-weight: bold;
+  }
+
+  .prioridad-baja{
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: #067f0c;
+    font-weight: bold;
+  }
+
+  .estado-pendiente {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: #ecb616;
+    font-weight: bold;
+  }
+  
+  .estado-finalizado {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: #067f0c;
+    font-weight: bold;
+  }
+
+ion-card-content {
+    padding: 5px;
+}
+
+.icon-trayectoria {
+    width: 35px;
+    height: 35px;
+}
+
+.label-trayectoria{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.numero-trayectoria{
+    font-size: 0.8rem;
+}
+
+.card-clientes{
+    box-shadow: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,185 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 55px">
+    <ion-buttons slot="start">
+      <ion-menu-button style="font-size: 40px; width: 45px"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-card class="card-name">
+      {{ trayectoria.nombre }} - Trayectoria
+    </ion-card>
+
+    <ion-grid style="margin-top: -10px">
+      <!-- Primer grupo de cards -->
+      <ion-row>
+        <ion-col size="4">
+          <ion-card class="fila_uno">
+            <ion-card-header>
+              <img class="icon-trayectoria" src="../assets/activos.png" />
+            </ion-card-header>
+            <ion-card-content>
+              <label class="label-trayectoria">Proyectos</label>
+              <p class="numero-trayectoria">
+                {{ trayectoria.proyectos_activos }}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card class="fila_uno">
+            <ion-card-header>
+              <img class="icon-trayectoria" src="../assets/prospecto.png" />
+            </ion-card-header>
+            <ion-card-content>
+              <label class="label-trayectoria">Prospectos</label>
+              <p class="numero-trayectoria">{{ trayectoria.prospectos }}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card class="fila_uno">
+            <ion-card-header>
+              <img class="icon-trayectoria" src="../assets/asignado.png" />
+            </ion-card-header>
+            <ion-card-content>
+              <label class="label-trayectoria">Asignados</label>
+              <p class="numero-trayectoria">
+                {{ trayectoria.tickets_asignados }}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <!-- Segundo grupo de cards -->
+      <ion-row>
+        <ion-col size="4">
+          <ion-card class="fila_dos">
+            <ion-card-header>
+              <img class="icon-trayectoria" src="../assets/tickets.png" />
+            </ion-card-header>
+            <ion-card-content>
+              <label class="label-trayectoria">Generados</label>
+              <p class="numero-trayectoria">
+                {{ trayectoria.tickets_generados }}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card class="fila_dos">
+            <ion-card-header>
+              <img class="icon-trayectoria" src="../assets/pendiente.png" />
+            </ion-card-header>
+            <ion-card-content>
+              <label class="label-trayectoria">Pendientes</label>
+              <p class="numero-trayectoria">
+                {{ trayectoria.tickets_pendientes }}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card class="fila_dos">
+            <ion-card-header>
+              <img class="icon-trayectoria" src="../assets/resuelto.png" />
+            </ion-card-header>
+            <ion-card-content>
+              <label class="label-trayectoria">Resueltos</label>
+              <p class="numero-trayectoria">
+                {{ trayectoria.tickets_resueltos }}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-card class="card-clientes"> Clientes recientes </ion-card>
+
+    <ion-card class="clientes-card">
+      <ion-grid>
+        <ion-item *ngFor="let proyectos of clientesRecientes; let i = index" class="table-row">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="auto">
+                <img class="icon-clientes" src="../assets/cliente.png" />
+              </ion-col>
+              <ion-col size="auto">
+                <div class="prospecto-info">
+                  <div class="title-clientes">{{ proyectos.dominio }}</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-grid>
+    </ion-card>
+
+    
+    <ion-card class="card-clientes" style="margin-top: 25px">
+      Prospectos recientes
+    </ion-card>
+
+
+    <ion-card class="clientes-card">
+      <ion-grid>
+        <ion-item *ngFor="let prospectos of Prospectos; let i = index" class="table-row">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="auto">
+                <img class="icon-clientes" src="../assets/prospectos_recientes.png" />
+              </ion-col>
+              <ion-col size="7">
+                <div class="prospecto-info">
+                  <div class="title">{{ prospectos.nombre_empresa }}</div>
+                  <div class="data">{{ prospectos.dominio }}</div>
+                </div>
+              </ion-col>
+              <ion-col size="3" class="align-center">
+                <div class="prospecto-info">
+                  <div class="date2" style="margin-bottom: 21px;">{{ prospectos.nombre_estatus }}</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-grid>
+    </ion-card>
+
+
+
+    
+    <ion-card class="card-clientes" style="margin-top: 25px">
+      Tickets enviados
+    </ion-card>
+
+    <ion-card class="clientes-card">
+      <ion-grid>
+        <ion-item *ngFor="let tickets_generados of ticketsGenerados; let i = index" class="table-row">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="auto">
+                <img class="icon-clientes" src="../assets/enviados.png" />
+              </ion-col>
+              <ion-col size="6">
+                <div class="prospecto-info">
+                  <div class="title">{{ tickets_generados.asunto }}</div>
+                  <div class="data">{{ tickets_generados.destinatario }}</div>
+                </div>
+              </ion-col>
+              <ion-col size="2" class="align-center">
+                <div class="prospecto-info">
+                  <div
+                  [ngClass]="{'estado-pendiente': tickets_generados.status === 'PENDIENTE', 'estado-finalizado': tickets_generados.status === 'FINALIZADO'}"> {{ tickets_generados.status }}</div>                  
+                  <div [ngClass]="{'prioridad-alta': tickets_generados.prioridad === 'ALTA', 'prioridad-media': tickets_generados.prioridad === 'MEDIA', 'prioridad-baja': tickets_generados.prioridad === 'BAJA'}">{{ tickets_generados.prioridad }}</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-grid>
+    </ion-card>
